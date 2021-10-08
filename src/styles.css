@@ -1,0 +1,46 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(197, 197, 197);
+  width: 50%;
+  padding: 15px 10px;
+}
+.list-item.blue {
+  background: rgb(160, 255, 250);
+}
+.list-item-title {
+  display: flex;
+  align-items: center;
+}
+.list-title {
+  margin-left: 5px;
+}
+.list-icon {
+  cursor: pointer;
+}
+.inputs-container {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-around;
+  width: 50%;
+}
+.input-button {
+  display: flex;
+  align-items: center;
+}
