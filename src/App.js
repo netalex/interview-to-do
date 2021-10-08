@@ -21,16 +21,11 @@ import { Search } from "./components/Search";
 
 import "./styles.css";
 
-const cb = (event, taskn) => {
-    event.preventDefault();
-    console.log(event, 'cb pippo', taskn);
-};
-
 const App = () => {
   return (
     <div className="app-container">
       <Search />
-      <Inputs onGetTask={cb} />
+      <Inputs />
       <List />
     </div>
   );
