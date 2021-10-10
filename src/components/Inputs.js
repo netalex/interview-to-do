@@ -1,24 +1,6 @@
 import {AiOutlinePlusCircle} from "react-icons/ai";
 import {useState} from "react";
 
-/*
-export const Inputs = (props) => {
-  return (
-    <div className="inputs-container">
-        <form>
-      <input type="text" placeholder="Add Todo" />
-
-        </form>
-      {/!*<button className="input-button" onClick={(event) => props.onGetTask(event)}>
-        <AiOutlinePlusCircle />
-        Add
-      </button>*!/}
-    </div>
-  );
-};*/
-
-
-
 export const Inputs = (props) => {
     const [taskName, setTaskName] = useState('')
 

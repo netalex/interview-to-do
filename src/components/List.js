@@ -1,10 +1,8 @@
 import {ListItem} from "./ListItem"
 
-export const List = () => {
+export const List = (props) => {
+    console.log(props.dta);
     return (
-        <div className="list-container">
-            <ListItem title={"pippo"} style={''} done={true}/>
-            <ListItem title={"pippo2"} style={'blue'} done={false}/>
-        </div>
+        props.dta.map((d, idx) => <ListItem key={d.id} title={d.title} style={(idx % 2 != 0) && 'blue'} done={false}/>)
     );
 };
