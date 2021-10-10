@@ -22,8 +22,8 @@ export const Inputs = (props) => {
 export const Inputs = (props) => {
     const [taskName, setTaskName] = useState('')
 
-    const onChangeHandler = (event) => {
-        console.log(event.target.value, "onChangeHandler()");
+    const onChangeTakNameHandler = (event) => {
+        console.log(event.target.value, "onChangeTakNameHandler()");
         setTaskName(event.target.value);
         console.log(taskName)
     }
@@ -31,7 +31,7 @@ export const Inputs = (props) => {
     return (
         <div className="inputs-container">
             <form onSubmit={(event)=> props.onGetTask(event, taskName)}>
-                <input id="taskName" type="text" onChange={onChangeHandler} placeholder="Add Todo"/>
+                <input id="taskName" type="text" onChange={onChangeTakNameHandler} placeholder="Add Todo"/>
                 <button type="submit" className="input-button">
                     <AiOutlinePlusCircle/>
                     Add
