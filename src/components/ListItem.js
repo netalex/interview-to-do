@@ -1,14 +1,22 @@
-import React from "react";
-import {AiOutlineCheckCircle, AiOutlineDelete} from "react-icons/ai";
+import React, {useState} from "react";
+import {AiOutlineCheckCircle, AiOutlineCloseCircle, AiOutlineDelete} from "react-icons/ai";
 
- export const ListItem = (props) => {
+
+export const ListItem = (props) => {
+    const [done, setDone] = useState(props.done)
     return (
         <div className={`list-item ${props.style}`}>
             <div className="list-item-title">
-                <AiOutlineCheckCircle
-                    className="list-icon"
-                    onClick={() => console.log("SET NO DONE")}
-                />
+                {done ?
+                    <AiOutlineCheckCircle
+                        className="list-icon"
+                        onClick={() => setDone(false)}
+                    /> :
+                    <AiOutlineCloseCircle
+                        className="list-icon"
+                        onClick={() => setDone(true)}
+                    />
+                }
                 <span className="list-title">{props.title}</span>
             </div>
             <AiOutlineDelete
